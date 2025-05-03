@@ -1,10 +1,9 @@
-# Start from Binder’s minimal R image
-FROM ghcr.io/binder-examples/r:main
+FROM rocker/rstudio:4.3.3
 
-# Set micromamba root so the terminal works
-ENV MAMBA_ROOT_PREFIX=/srv/conda
+# Prevent micromamba crash by setting root prefix
+ENV MAMBA_ROOT_PREFIX=/usr/local
 
-# Copy and install R packages (optional)
+# Optional: install R packages
 COPY install.R /tmp/install.R
 RUN Rscript /tmp/install.R
 
