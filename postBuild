@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Fix terminal startup by setting the root prefix for micromamba
-echo "export MAMBA_ROOT_PREFIX=/srv/conda" >> ~/.bashrc
+echo "export MAMBA_ROOT_PREFIX=/srv/conda" >> ~/.profile
