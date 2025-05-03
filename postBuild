@@ -1,2 +1,2 @@
-#!/bin/bash  
-echo "export MAMBA_ROOT_PREFIX=/srv/conda" >> /etc/profile.d/mamba_root.sh
+#!/bin/bash
+echo "export MAMBA_ROOT_PREFIX=/srv/conda" >> ~/.bashrc
