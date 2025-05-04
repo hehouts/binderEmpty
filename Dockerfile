@@ -1,11 +1,8 @@
-FROM rocker/rstudio:4.3.3
+FROM rocker/binder:4.2.2
 
-# Prevent micromamba crash by setting root prefix
-ENV MAMBA_ROOT_PREFIX=/usr/local
-
-# Optional: install R packages
+# Install additional R packages (optional)
 COPY install.R /tmp/install.R
 RUN Rscript /tmp/install.R
 
-# Set working directory
-WORKDIR /home/rstudio
+# Default to user rstudio for Binder
+USER rstudio
